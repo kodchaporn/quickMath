@@ -6,45 +6,7 @@ var score = 0;
 function startGame(){
 	timeCount();
 	score = 0;
-	var correctAns = btn[rand(4)];
-	bucket = [];	
-	var w = rand(2);
-	var x = rand(2);
-	var y = rand(2);
-	var z = rand(2);
-	num1.innerText = w;
-	num2.innerText = x;
-	num3.innerText = y;
-	num4.innerText = z;
-
-	// convert to string
-	var wToString = w.toString();
-	var xToString = x.toString();
-	var yToString = y.toString();
-	var zToString = z.toString();
-	var decResultString = wToString.concat(xToString, yToString, zToString);
-	document.getElementById("num5").innerHTML = decResultString;
-
-	// convert to integer
-
-	var binInt = parseInt(decResultString);
-
-	// calaulate bin to dec
-	binToDec = bin2dec(binInt);
-	document.getElementById("num5").innerHTML = binToDec;
-
-	for (var i=0;i<=15;i++) {
-		if (i!=binToDec) {
-			bucket.push(i);
-		}
-	}
-	
-	for (i=0; i<=4; i++){	
-		document.getElementById(correctAns).innerHTML = bin2dec(binInt);
-		if(btn[i] != btn[correctAns]){
-			document.getElementById(btn[i]).innerHTML = getRandomFromBucket();
-		}
-	}
+	randomQuestion();
 }
 
 function randomQuestion(){
