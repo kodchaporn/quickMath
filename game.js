@@ -1,4 +1,4 @@
-//random
+//random number
 var w = rand(2);
 var x = rand(2);
 var y = rand(2);
@@ -15,7 +15,7 @@ var yToString = y.toString();
 var zToString = z.toString();
 var decResult = wToString.concat(xToString, yToString, zToString);
 document.getElementById("demo5").innerHTML = decResult;
-		
+
 // convert to integer
 
 var binInt = parseInt(decResult);
@@ -24,15 +24,29 @@ var binInt = parseInt(decResult);
 document.getElementById("demo5").innerHTML = bin2dec(binInt);
 
 //random button
+var bucket = [];
+
+for (var i=0;i<=15;i++) {
+	if (i!=bin2dec(binInt)) {
+		bucket.push(i);
+	}
+    
+}
+
+function getRandomFromBucket() {
+   var randomIndex = Math.floor(Math.random()*bucket.length);
+   return bucket.splice(randomIndex, 1)[0];
+}
+
+
 var btn = ["btn1", "btn2", "btn3", "btn4"];
 var correctAns = btn[rand(4)];
-
-
-//answer button
-document.getElementById(correctAns).innerHTML = bin2dec(binInt);
-// document.getElementById("btn2").innerHTML = rand(16);
-// document.getElementById("btn3").innerHTML = rand(16);
-// document.getElementById("btn4").innerHTML = rand(16);
+for (i=0; i<=4; i++){	
+	document.getElementById(correctAns).innerHTML = bin2dec(binInt);
+	if(btn[i] != btn[correctAns]){
+		document.getElementById(btn[i]).innerHTML = getRandomFromBucket();
+	}
+}
 
 function bin2dec(bin){
 	return parseInt(bin, 2).toString(10);
