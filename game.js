@@ -1,20 +1,21 @@
 var bucket = [];
 var binToDec = 0;
 var btn = ["btn1", "btn2", "btn3", "btn4"];
-
+var score = 0;
 
 //random number
 function randomQuestion(){
+	timeCount();
 	var correctAns = btn[rand(4)];
 	bucket = [];	
 	var w = rand(2);
 	var x = rand(2);
 	var y = rand(2);
 	var z = rand(2);
-	document.getElementById("demo1").innerHTML = w;
-	document.getElementById("demo2").innerHTML = x;
-	document.getElementById("demo3").innerHTML = y;
-	document.getElementById("demo4").innerHTML = z;
+	demo1.innerText = w;
+	demo2.innerText = x;
+	demo3.innerText = y;
+	demo4.innerText = z;
 
 	// convert to string
 	var wToString = w.toString();
@@ -32,8 +33,6 @@ function randomQuestion(){
 	binToDec = bin2dec(binInt);
 	document.getElementById("demo5").innerHTML = binToDec;
 
-	
-
 	for (var i=0;i<=15;i++) {
 		if (i!=binToDec) {
 			bucket.push(i);
@@ -48,47 +47,51 @@ function randomQuestion(){
 	}
 }
 
-
+function timeCount(){
+	for (let i = 60; i >= 0; i--) {
+		setTimeout(function(){
+			time.innerText = i;
+		}, 1000*(10-i));
+	}
+}
 
 function checkAnswer(){
 	document.getElementById('btn1').onclick = function() {
 		if (parseInt(document.getElementById('btn1').innerHTML) == binToDec) {
+			score++;
+			document.getElementById("score").innerHTML = score;
 			randomQuestion();
 		}
 	};
 	document.getElementById('btn2').onclick = function() {
 		if (parseInt(document.getElementById('btn2').innerHTML) == binToDec) {
+			score++;
+			document.getElementById("score").innerHTML = score;
 			randomQuestion();
 		}
 	};
 	document.getElementById('btn3').onclick = function() {
 		if (parseInt(document.getElementById('btn3').innerHTML) == binToDec) {
+			score++;
+			document.getElementById("score").innerHTML = score;
 			randomQuestion();
 		}
 	};
 	document.getElementById('btn4').onclick = function() {
 		if (parseInt(document.getElementById('btn4').innerHTML) == binToDec) {
+			score++;
+			document.getElementById("score").innerHTML = score;
 			randomQuestion();
 		}
 	};
 
+
 }
-
-// function checkClick(){
-// 	document.getElementById("btn1").addEventListener("click", checkAnswer);
-// 	document.getElementById("btn2").addEventListener("click", checkAnswer);
-// 	document.getElementById("btn3").addEventListener("click", checkAnswer);
-// 	document.getElementById("btn4").addEventListener("click", checkAnswer);
-// }
-
 
 function getRandomFromBucket() {
 	var randomIndex = Math.floor(Math.random()*bucket.length);
 	return bucket.splice(randomIndex, 1)[0];
 }
-
-
-
 
 function bin2dec(bin){
 	return parseInt(bin, 2).toString(10);
