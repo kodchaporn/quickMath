@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quickMath</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<h2>Binary to Decimal</h2>
+
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p><br>
+	<p id="demo5"></p>
+
+	<script>
+		var w = rand(2);
+		var x = rand(2);
+		var y = rand(2);
+		var z = rand(2);
+		document.getElementById("demo1").innerHTML = w;
+		document.getElementById("demo2").innerHTML = x;
+		document.getElementById("demo3").innerHTML = y;
+		document.getElementById("demo4").innerHTML = z;
+		var wToString = w.toString();
+		var xToString = x.toString();
+		var yToString = y.toString();
+		var zToString = z.toString();
+		var decResult = wToString.concat(xToString, yToString, zToString);
+		document.getElementById("demo5").innerHTML = decResult;
+		
+		var binInt = parseInt(decResult);
+		document.getElementById("demo5").innerHTML = bin2dec(binInt);
+
+		function bin2dec(bin){
+			return parseInt(bin, 2).toString(10);
+		}
+
+		function rand(max) {
+			return Math.floor(Math.random() * Math.floor(max));
+		}
+	</script>
+
+</body>
+</html>
