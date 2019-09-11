@@ -44,3 +44,7 @@ button{
 	opacity: 0;
 	text-align: center;
 }
+
+#score{
+	padding: 20px;
+}
