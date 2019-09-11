@@ -50,10 +50,6 @@ function randomQuestion(){
 
 
 function checkAnswer(){
-	// var ansOnBtn = document.getElementById().value;
-	// if (bin2dec(binInt) == ansOnBtn) {
-	// 	randomQuestion();
-	// }
 	document.getElementById('btn1').onclick = function() {
 		if (parseInt(document.getElementById('btn1').innerHTML) == binToDec) {
 			randomQuestion();
