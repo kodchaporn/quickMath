@@ -6,28 +6,33 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<div id="gameArea">
+		<h2>Binary to Decimal</h2>
 
-	<h2>Binary to Decimal</h2>
+		<button id="startGame" onclick="startGame()">Start!</button><br>
 
-	<button id="startGame" onclick="startGame()">Start!</button><br>
+		<h3 id="time">Time: 60</h3><br>
 
-	<h3 id="time">Time: 60</h3><br>
+		
+		<h2 id="num1" class="number">1</h2>
+		<h2 id="num2" class="number">1</h2>
+		<h2 id="num3" class="number">1</h2>
+		<h2 id="num4" class="number">1</h2><br><br>
+		<h2 id="num5" class="number"></h2><br><br>
+		
+		
 
-	<div id="demo1"></div>
-	<div id="demo2"></div>
-	<div id="demo3"></div>
-	<div id="demo4"></div><br><br>
-	<div id="demo5"></div><br><br>
+		<div id="answer">
+			<!-- <input class="button" type="submit" name="button" value="enter"/> -->
+			<button id="btn1" class="button" onclick="checkAnswer()"></button>
+			<button id="btn2" class="button" onclick="checkAnswer()"></button>
+			<button id="btn3" class="button" onclick="checkAnswer()"></button>
+			<button id="btn4" class="button" onclick="checkAnswer()"></button>
+		</div><br><br>
 
-	<div id="answer">
-		<!-- <input class="button" type="submit" name="button" value="enter"/> -->
-		<button id="btn1" class="button" onclick="checkAnswer()"></button>
-		<button id="btn2" class="button" onclick="checkAnswer()"></button>
-		<button id="btn3" class="button" onclick="checkAnswer()"></button>
-		<button id="btn4" class="button" onclick="checkAnswer()"></button>
-	</div><br><br>
-
-	<h2 id="score">score: 0</h2>
+		<h2 id="score">score: 0</h2>
+	</div>
+	
 
 	<div id="endGame">
 		<h1 id="showScore"></h1>

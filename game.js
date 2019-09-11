@@ -5,16 +5,17 @@ var score = 0;
 
 function startGame(){
 	timeCount();
+	score = 0;
 	var correctAns = btn[rand(4)];
 	bucket = [];	
 	var w = rand(2);
 	var x = rand(2);
 	var y = rand(2);
 	var z = rand(2);
-	demo1.innerText = w;
-	demo2.innerText = x;
-	demo3.innerText = y;
-	demo4.innerText = z;
+	num1.innerText = w;
+	num2.innerText = x;
+	num3.innerText = y;
+	num4.innerText = z;
 
 	// convert to string
 	var wToString = w.toString();
@@ -22,7 +23,7 @@ function startGame(){
 	var yToString = y.toString();
 	var zToString = z.toString();
 	var decResultString = wToString.concat(xToString, yToString, zToString);
-	document.getElementById("demo5").innerHTML = decResultString;
+	document.getElementById("num5").innerHTML = decResultString;
 
 	// convert to integer
 
@@ -30,7 +31,7 @@ function startGame(){
 
 	// calaulate bin to dec
 	binToDec = bin2dec(binInt);
-	document.getElementById("demo5").innerHTML = binToDec;
+	document.getElementById("num5").innerHTML = binToDec;
 
 	for (var i=0;i<=15;i++) {
 		if (i!=binToDec) {
@@ -53,10 +54,10 @@ function randomQuestion(){
 	var x = rand(2);
 	var y = rand(2);
 	var z = rand(2);
-	demo1.innerText = w;
-	demo2.innerText = x;
-	demo3.innerText = y;
-	demo4.innerText = z;
+	num1.innerText = w;
+	num2.innerText = x;
+	num3.innerText = y;
+	num4.innerText = z;
 
 	// convert to string
 	var wToString = w.toString();
@@ -64,7 +65,7 @@ function randomQuestion(){
 	var yToString = y.toString();
 	var zToString = z.toString();
 	var decResultString = wToString.concat(xToString, yToString, zToString);
-	document.getElementById("demo5").innerHTML = decResultString;
+	document.getElementById("num5").innerHTML = decResultString;
 
 	// convert to integer
 
@@ -72,7 +73,7 @@ function randomQuestion(){
 
 	// calaulate bin to dec
 	binToDec = bin2dec(binInt);
-	document.getElementById("demo5").innerHTML = binToDec;
+	document.getElementById("num5").innerHTML = binToDec;
 
 	for (var i=0;i<=15;i++) {
 		if (i!=binToDec) {
@@ -92,12 +93,7 @@ function timeCount(){
 	for (let i = 10; i >= 0; i--) {
 		if (i == 0) {
 			setTimeout(function(){
-				let btn = document.createElement("BUTTON");
-				btn.setAttribute("id","tryA");
-				endGame.appendChild(btn);
-				tryA.innerText = "Try Again";
-				// btn.onclick = startGame();
-				showScore.innerText = score;
+				setGameEnd();
 			}, 1000*(10-i));
 			
 		}
@@ -107,6 +103,24 @@ function timeCount(){
 		
 	}
 	
+}
+
+function setGameEnd(){
+	let btn = document.createElement("BUTTON");
+	btn.setAttribute("id","tryA");
+	endGame.appendChild(btn);
+	tryA.innerText = "Try Again";
+	endGame.style.opacity = 1;
+	endGame.style.zIndex = 1;
+	showScore.innerText = score;
+	document.getElementById("tryA").onclick = clearGameEnd;
+}
+
+function clearGameEnd(){
+	endGame.style.opacity = 0;
+	endGame.style.zIndex = -1;
+	tryA.outerHTML = "";
+	startGame();
 }
 
 function checkAnswer(){
