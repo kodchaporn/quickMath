@@ -4,9 +4,10 @@ var btn = ["btn1", "btn2", "btn3", "btn4"];
 var score = 0;
 
 function startGame(){
-	timeCount();
 	score = 0;
+	timeCount();	
 	randomQuestion();
+	document.getElementById("score").innerHTML = "score:" + score;
 }
 
 function randomQuestion(){
