@@ -3,7 +3,7 @@ div{
 	float: left;
 }
 
-.answer{
+#answer{
 	width: 50%;
 	height: 30%;
 }

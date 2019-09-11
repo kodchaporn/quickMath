@@ -5,7 +5,7 @@ var correctAns = btn[rand(4)];
 
 //random number
 function randomQuestion(){
-	bucket = [];
+	bucket = [];	
 	var w = rand(2);
 	var x = rand(2);
 	var y = rand(2);
@@ -55,22 +55,22 @@ function checkAnswer(){
 	// 	randomQuestion();
 	// }
 	document.getElementById('btn1').onclick = function() {
-		if (document.getElementById('btn1').value == binToDec) {
+		if (parseInt(document.getElementById('btn1').innerHTML) == binToDec) {
 			randomQuestion();
 		}
 	};
 	document.getElementById('btn2').onclick = function() {
-		if (document.getElementById('btn2').value == binToDec) {
+		if (parseInt(document.getElementById('btn2').innerHTML) == binToDec) {
 			randomQuestion();
 		}
 	};
 	document.getElementById('btn3').onclick = function() {
-		if (document.getElementById('btn3').value == binToDec) {
+		if (parseInt(document.getElementById('btn3').innerHTML) == binToDec) {
 			randomQuestion();
 		}
 	};
 	document.getElementById('btn4').onclick = function() {
-		if (document.getElementById('btn4').value == binToDec) {
+		if (parseInt(document.getElementById('btn4').innerHTML) == binToDec) {
 			randomQuestion();
 		}
 	};
