@@ -1,10 +1,11 @@
 var bucket = [];
 var binToDec = 0;
 var btn = ["btn1", "btn2", "btn3", "btn4"];
-var correctAns = btn[rand(4)];
+
 
 //random number
 function randomQuestion(){
+	var correctAns = btn[rand(4)];
 	bucket = [];	
 	var w = rand(2);
 	var x = rand(2);
