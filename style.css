@@ -2,3 +2,8 @@ div{
 	width: 10px;
 	float: left;
 }
+
+.answer{
+	width: 50%;
+	height: 30%;
+}
