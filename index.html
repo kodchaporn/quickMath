@@ -9,9 +9,9 @@
 
 	<h2>Binary to Decimal</h2>
 
-	<button id="startGame" onclick="randomQuestion()">Start!</button><br>
+	<button id="startGame" onclick="startGame()">Start!</button><br>
 
-	<h3 id="time">0</h3><br><br>
+	<h3 id="time">Time: 60</h3><br>
 
 	<div id="demo1"></div>
 	<div id="demo2"></div>
@@ -27,7 +27,12 @@
 		<button id="btn4" class="button" onclick="checkAnswer()"></button>
 	</div><br><br>
 
-	<h2 id="score"></h2>
+	<h2 id="score">score: 0</h2>
+
+	<div id="endGame">
+		<h1 id="showScore"></h1>
+	</div>
+	
 
 	<script src="game.js"></script>
 

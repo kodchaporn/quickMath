@@ -8,11 +8,19 @@ button{
 	height: 30px;
 }
 
-#startGame{
-	width: 60px;
+#startGame, #tryA{
+	width: auto;
 }
 
 #answer{
 	width: 50%;
 	height: 30%;
+}
+
+#endGame{
+	width: 50%;
+	height: 50%;
+	z-index: 1;
+	position: absolute;
+	background-color: green;
 }
