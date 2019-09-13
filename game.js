@@ -5,6 +5,7 @@ var score = 0;
 
 function startGame(){
 	score = 0;
+	header.innerText = "Binary to Decimal";
 	clearHome();
 	setGame();
 	timeCount();	
@@ -14,6 +15,7 @@ function startGame(){
 
 function hexGame(){
 	score = 0;
+	header.innerText = "Hexadecimal to decimal";
 	timeCount();
 	clearHome();
 	setGame();
@@ -85,7 +87,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -97,7 +99,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -109,7 +111,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -121,7 +123,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -215,5 +217,7 @@ function clearGameEnd(){
 	endGame.style.opacity = 0;
 	endGame.style.zIndex = -2;
 	timeCount();
+	score = 0;
+	document.getElementById("score").innerHTML = "score: " + score;
 }
 
