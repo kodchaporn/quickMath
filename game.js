@@ -7,17 +7,18 @@ function startGame(){
 	score = 0;
 	clearHome();
 	setGame();
-	// timeCount();	
+	timeCount();	
 	randomQuestion();
-	document.getElementById("score").innerHTML = "score:" + score;
+	document.getElementById("score").innerHTML = "score: " + score;
 }
 
 function hexGame(){
 	score = 0;
-	// timeCount();
+	timeCount();
 	clearHome();
+	setGame();
 	randomQuestion_hex();
-		document.getElementById("score").innerHTML = "score:" + score;
+	document.getElementById("score").innerHTML = "score: " + score;
 }
 
 function randomQuestion(){
@@ -76,36 +77,6 @@ function timeCount(){
 	}
 	
 }
-function setGame(){
-	gameArea.style.opacity = 1;
-	gameArea.style.zIndex = 2;
-}
-
-function clearHome(){
-	home.style.opacity = 0;
-	home.style.zIndex = -2;
-	binBtn.style.zIndex = -2;
-	hexBtn.style.zIndex = -2;
-	document.getElementsByClassName("playBtn").outerHTML = "";
-}
-
-function setGameEnd(){
-	let btn = document.createElement("BUTTON");
-	btn.setAttribute("id","tryA");
-	endGame.appendChild(btn);
-	tryA.innerText = "Try Again";
-	endGame.style.opacity = 1;
-	endGame.style.zIndex = 2;
-	showScore.innerText = score;
-	document.getElementById("tryA").onclick = clearGameEnd;
-}
-
-function clearGameEnd(){
-	endGame.style.opacity = 0;
-	endGame.style.zIndex = -1;
-	tryA.outerHTML = "";
-	startGame();
-}
 
 function checkAnswer(){
 	document.getElementById('btn1').onclick = function() {
@@ -114,7 +85,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -126,7 +97,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -138,7 +109,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -150,7 +121,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -215,4 +186,34 @@ function randomQuestion_hex(){
 
 }
 
-///////////////////
+function menu(){
+	endGame.style.opacity = 0;
+	endGame.style.zIndex = -2;
+	gameArea.style.opacity = 0;
+	gameArea.style.zIndex = -1;
+	home.style.opacity = 1;
+	home.style.zIndex = 3;
+}
+
+function setGame(){
+	gameArea.style.opacity = 1;
+	gameArea.style.zIndex = 2;
+}
+
+function clearHome(){
+	home.style.opacity = 0;
+	home.style.zIndex = -2;
+}
+
+function setGameEnd(){	
+	endGame.style.opacity = 1;
+	endGame.style.zIndex = 2;
+	showScore.innerText = score;
+}
+
+function clearGameEnd(){
+	endGame.style.opacity = 0;
+	endGame.style.zIndex = -2;
+	timeCount();
+}
+

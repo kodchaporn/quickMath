@@ -85,7 +85,7 @@ div{
 	height: 100vh;
 	z-index: -2;
 	position: absolute;
-	background-color: green;
+	background-color: #d6d8cd;
 	opacity: 0;
 	text-align: center;
 }
