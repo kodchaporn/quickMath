@@ -1,5 +1,6 @@
 var bucket = [];
 var binToDec = 0;
+var hexToDec = 0;
 var btn = ["btn1", "btn2", "btn3", "btn4"];
 var score = 0;
 
@@ -65,16 +66,16 @@ function randomQuestion(){
 }
 
 function timeCount(){
-	for (let i = 10; i >= 0; i--) {
+	for (let i = 30; i >= 0; i--) {
 		if (i == 0) {
 			setTimeout(function(){
 				setGameEnd();
-			}, 1000*(10-i));
+			}, 1000*(30-i));
 			
 		}
 		setTimeout(function(){
 			time.innerText = "Time: " + i;
-		}, 1000*(10-i));
+		}, 1000*(30-i));
 		
 	}
 	
@@ -87,11 +88,19 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
 		}
+		// else if (parseInt(document.getElementById('btn1').innerHTML) != binToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
+		// else if (parseInt(document.getElementById('btn1').innerHTML) != hexToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
 	};
 	document.getElementById('btn2').onclick = function() {
 		if (parseInt(document.getElementById('btn2').innerHTML) == binToDec) {
@@ -99,11 +108,19 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
 		}
+		// else if (parseInt(document.getElementById('btn2').innerHTML) != binToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
+		// else if (parseInt(document.getElementById('btn2').innerHTML) != hexToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
 	};
 	document.getElementById('btn3').onclick = function() {
 		if (parseInt(document.getElementById('btn3').innerHTML) == binToDec) {
@@ -111,11 +128,19 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
 		}
+		// else if (parseInt(document.getElementById('btn3').innerHTML) != binToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
+		// else if (parseInt(document.getElementById('btn3').innerHTML) != hexToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
 	};
 	document.getElementById('btn4').onclick = function() {
 		if (parseInt(document.getElementById('btn4').innerHTML) == binToDec) {
@@ -123,11 +148,19 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		else if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
+		if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
 		}
+		// else if (parseInt(document.getElementById('btn4').innerHTML) != binToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
+		// else if (parseInt(document.getElementById('btn4').innerHTML) != hexToDec) {
+		// 	score--;
+		// 	document.getElementById("score").innerHTML = "score:" + score;
+		// }
 	};
 
 
