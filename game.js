@@ -5,9 +5,19 @@ var score = 0;
 
 function startGame(){
 	score = 0;
-	timeCount();	
+	clearHome();
+	setGame();
+	// timeCount();	
 	randomQuestion();
 	document.getElementById("score").innerHTML = "score:" + score;
+}
+
+function hexGame(){
+	score = 0;
+	// timeCount();
+	clearHome();
+	randomQuestion_hex();
+		document.getElementById("score").innerHTML = "score:" + score;
 }
 
 function randomQuestion(){
@@ -35,7 +45,7 @@ function randomQuestion(){
 
 	// calaulate bin to dec
 	binToDec = bin2dec(binInt);
-	document.getElementById("num5").innerHTML = binToDec;
+	num5.innerText = binToDec;
 
 	for (var i=0;i<=15;i++) {
 		if (i!=binToDec) {
@@ -66,6 +76,18 @@ function timeCount(){
 	}
 	
 }
+function setGame(){
+	gameArea.style.opacity = 1;
+	gameArea.style.zIndex = 2;
+}
+
+function clearHome(){
+	home.style.opacity = 0;
+	home.style.zIndex = -2;
+	binBtn.style.zIndex = -2;
+	hexBtn.style.zIndex = -2;
+	document.getElementsByClassName("playBtn").outerHTML = "";
+}
 
 function setGameEnd(){
 	let btn = document.createElement("BUTTON");
@@ -73,7 +95,7 @@ function setGameEnd(){
 	endGame.appendChild(btn);
 	tryA.innerText = "Try Again";
 	endGame.style.opacity = 1;
-	endGame.style.zIndex = 1;
+	endGame.style.zIndex = 2;
 	showScore.innerText = score;
 	document.getElementById("tryA").onclick = clearGameEnd;
 }
@@ -92,7 +114,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -104,7 +126,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -116,7 +138,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -128,7 +150,7 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
-		if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
+		else if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion_hex();
@@ -157,13 +179,7 @@ function hex2dec(hex){
 }
 
 
-function hexGame(){
-	score = 0;
-	// timeCount();
-	randomQuestion_hex();
-	
-	document.getElementById("score").innerHTML = "score:" + score;
-}
+
 
 function randomQuestion_hex(){
 	var correctAns = btn[rand(4)];
