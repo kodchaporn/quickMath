@@ -48,7 +48,7 @@ function randomQuestion(){
 
 	// calaulate bin to dec
 	binToDec = bin2dec(binInt);
-	num5.innerText = binToDec;
+	// num5.innerText = binToDec;
 
 	for (var i=0;i<=15;i++) {
 		if (i!=binToDec) {
@@ -171,7 +171,7 @@ function randomQuestion_hex(){
 
 	// calaulate hex to dec
 	hexToDec = hex2dec(hexResultString);
-	document.getElementById("num5").innerHTML = hexToDec;
+	// document.getElementById("num5").innerHTML = hexToDec;
 
 	for (var i=0;i<=255;i++) {
 		if (i!=hexToDec) {
