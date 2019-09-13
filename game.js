@@ -5,7 +5,7 @@ var score = 0;
 
 function startGame(){
 	score = 0;
-	// timeCount();	
+	timeCount();	
 	randomQuestion();
 	document.getElementById("score").innerHTML = "score:" + score;
 }
@@ -28,7 +28,6 @@ function randomQuestion(){
 	var yToString = y.toString();
 	var zToString = z.toString();
 	var decResultString = wToString.concat(xToString, yToString, zToString);
-	document.getElementById("num5").innerHTML = decResultString;
 
 	// convert to integer
 
@@ -93,12 +92,22 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
+		if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
+			score++;
+			document.getElementById("score").innerHTML = "score:" + score;
+			randomQuestion_hex();
+		}
 	};
 	document.getElementById('btn2').onclick = function() {
 		if (parseInt(document.getElementById('btn2').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
+		}
+		if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
+			score++;
+			document.getElementById("score").innerHTML = "score:" + score;
+			randomQuestion_hex();
 		}
 	};
 	document.getElementById('btn3').onclick = function() {
@@ -107,12 +116,22 @@ function checkAnswer(){
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
 		}
+		if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
+			score++;
+			document.getElementById("score").innerHTML = "score:" + score;
+			randomQuestion_hex();
+		}
 	};
 	document.getElementById('btn4').onclick = function() {
 		if (parseInt(document.getElementById('btn4').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
 			randomQuestion();
+		}
+		if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
+			score++;
+			document.getElementById("score").innerHTML = "score:" + score;
+			randomQuestion_hex();
 		}
 	};
 
@@ -133,8 +152,8 @@ function rand(max) {
 }
 
 /////////////ฐานสิบหกไปฐานสิบ
-function hex2dec(bin){
-	return parseInt(bin, 16).toString(10);
+function hex2dec(hex){
+	return parseInt(hex, 16);
 }
 
 
@@ -149,42 +168,30 @@ function hexGame(){
 function randomQuestion_hex(){
 	var correctAns = btn[rand(4)];
 	bucket = [];
-	var items = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+	var items = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
 	
 
-	var w = items[Math.floor(Math.random()*16)];
-	var x = items[Math.floor(Math.random()*16)];
-	var y = items[Math.floor(Math.random()*16)];
-	var z = items[Math.floor(Math.random()*16)];
-	num1.innerText = w;
+	var x = items[rand(items.length)];
+	var y = items[rand(items.length)];
 	num2.innerText = x;
 	num3.innerText = y;
-	num4.innerText = z;
-
 	// convert to string
-	var wToString = w.toString();
 	var xToString = x.toString();
 	var yToString = y.toString();
-	var zToString = z.toString();
-	var decResultString = wToString.concat(xToString, yToString, zToString);
-	document.getElementById("num5").innerHTML = decResultString;
-
-	// convert to integer
-
-	var binInt = parseInt(decResultString);
+	var hexResultString = xToString.concat(yToString);
 
 	// calaulate hex to dec
-	hexToDec = hex2dec(binInt);
+	hexToDec = hex2dec(hexResultString);
 	document.getElementById("num5").innerHTML = hexToDec;
 
-	for (var i=0;i<=15;i++) {
+	for (var i=0;i<=255;i++) {
 		if (i!=hexToDec) {
 			bucket.push(i);
 		}
 	}
 	
 	for (i=0; i<=4; i++){	
-		document.getElementById(correctAns).innerHTML = hexToDec(binInt);
+		document.getElementById(correctAns).innerHTML = hexToDec;
 		if(btn[i] != btn[correctAns]){
 			document.getElementById(btn[i]).innerHTML = getRandomFromBucket();
 		}
