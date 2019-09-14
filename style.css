@@ -19,6 +19,7 @@ div{
 	margin: 10px;
 	padding: 20px;
 	border-style: none;
+	width: 30%;
 }
 .playBtn:hover{
 	opacity: 0.8;
@@ -68,10 +69,6 @@ div{
 
 .number{
 	display: inline-block
-}
-
-#startGame, #tryA{
-	width: auto;
 }
 
 #answer{
