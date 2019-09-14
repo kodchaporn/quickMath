@@ -49,6 +49,9 @@ div{
 	padding: 20px;
 	border-style: none;
 }
+.ansbtn:hover{
+	opacity: 0.8;
+}
 
 #home{
 	top: 0%;
