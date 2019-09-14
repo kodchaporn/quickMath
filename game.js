@@ -278,7 +278,7 @@ function randomPlus(){
 
 	// calaulate bin to dec
 	plusResult = plus1Int+plus2Int;
-	num5.innerText = plusResult;
+	// num5.innerText = plusResult;
 
 	for (var i=0;i<=198;i++) {
 		if (i!=plusResult) {
