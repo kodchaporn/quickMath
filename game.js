@@ -247,16 +247,12 @@ function randomQuestion_hex(){
 function randomPlus(){
 	var correctAns = btn[rand(4)];
 	bucket = [];
-	var w = rand(10);
+	var number = [1,2,3,4,5,6,7,8,9];
+	var w = number[rand(number.length)];
 	var x = rand(10);
-	var y = rand(10);
+	var y = number[rand(number.length)];
 	var z = rand(10);
-	if (w==0) {
-		x = rand(10);
-	}
-	else if (y==0){
-		y = rand(10);
-	}
+
 	num1.innerText = w;
 	num2.innerText = x;
 	num3.innerText = "+";
