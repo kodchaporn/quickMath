@@ -227,7 +227,7 @@ function randomQuestion_hex(){
 
 	// calaulate hex to dec
 	hexToDec = hex2dec(hexResultString);
-	document.getElementById("num5").innerHTML = hexToDec;
+	// document.getElementById("num5").innerHTML = hexToDec;
 
 	for (var i=0;i<=255;i++) {
 		if (i!=hexToDec) {
@@ -272,7 +272,7 @@ function randomPlus(){
 	var plus1Int = parseInt(plus1String);
 	var plus2Int = parseInt(plus2String);
 
-	// calaulate bin to dec
+	// calaulate
 	plusResult = plus1Int+plus2Int;
 	// num5.innerText = plusResult;
 
