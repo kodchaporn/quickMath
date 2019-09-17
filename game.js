@@ -183,6 +183,7 @@ function randomQuestion(){
 	num2.innerText = x;
 	num3.innerText = y;
 	num4.innerText = z;
+	num6.innerText = "";
 
 	// convert to string
 	var wToString = w.toString();
@@ -225,6 +226,7 @@ function randomQuestion_hex(){
 	num4.innerText = "";
 	num2.innerText = x;
 	num3.innerText = y;
+	num6.innerText = "";
 	var hexResultString = x.concat(y);
 
 	// calaulate hex to dec
