@@ -18,18 +18,26 @@ function startGame(){
 		if (parseInt(document.getElementById('btn1').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			correctOrNot.innerText = "Correct";
 			randomQuestion();
+			correctOrNot.innerText = "";
+			
 		}
 		else if (parseInt(document.getElementById('btn1').innerHTML) != binToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+
 		}
 	};
 	document.getElementById('btn2').onclick = function() {
 		if (parseInt(document.getElementById('btn2').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			correctOrNot.innerText = "Correct";
 			randomQuestion();
+			correctOrNot.innerText = "";
+
+
 		}
 		else if (parseInt(document.getElementById('btn2').innerHTML) != binToDec) {
 			score--;
@@ -40,7 +48,9 @@ function startGame(){
 		if (parseInt(document.getElementById('btn3').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			correctOrNot.innerText = "Correct";
 			randomQuestion();
+			correctOrNot.innerText = "";
 		}
 		else if (parseInt(document.getElementById('btn3').innerHTML) != binToDec) {
 			score--;
@@ -51,7 +61,10 @@ function startGame(){
 		if (parseInt(document.getElementById('btn4').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			correctOrNot.innerText = "Correct";
 			randomQuestion();
+			correctOrNot.innerText = "";
+
 		}
 		else if (parseInt(document.getElementById('btn4').innerHTML) != binToDec) {
 			score--;
