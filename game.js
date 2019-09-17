@@ -221,6 +221,8 @@ function randomQuestion_hex(){
 
 	var x = items[rand(items.length)];
 	var y = items[rand(items.length)];
+	num1.innerText = "";
+	num4.innerText = "";
 	num2.innerText = x;
 	num3.innerText = y;
 	var hexResultString = x.concat(y);
