@@ -508,4 +508,3 @@ function clearGameEnd(){
 	score = 0;
 	document.getElementById("score").innerHTML = "score: " + score;
 }
-
