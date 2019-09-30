@@ -21,7 +21,7 @@ div{
 	border-style: none;
 	width: 30%;
 }
-.playBtn:hover{
+.playBtn:hover, .ansbtn:hover{
 	opacity: 0.8;
 }
 .forestgreen{
