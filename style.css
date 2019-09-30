@@ -24,6 +24,12 @@ div{
 .playBtn:hover{
 	opacity: 0.8;
 }
+.forestgreen{
+	background-color: #228b22;
+}
+.darkred{
+	background-color: #B22222;
+}
 .blue{
 	background-color: #3793BC;
 }
@@ -50,13 +56,12 @@ div{
 	border-style: none;
 }
 .ansbtn:active{
-	transform: scale(1.5);
+	transform: scale(1.2);
 }
 
 #correctOrNot{
 	width: 100%;
-	height: 20%;
-	background-color: gray;
+	height: 15%;
 }
 
 #home{

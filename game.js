@@ -18,57 +18,93 @@ function startGame(){
 		if (parseInt(document.getElementById('btn1').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
-			correctOrNot.innerText = "Correct";
-			randomQuestion();
-			correctOrNot.innerText = "";
-			
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
+			randomQuestion();			
 		}
 		else if (parseInt(document.getElementById('btn1').innerHTML) != binToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
-
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn2').onclick = function() {
 		if (parseInt(document.getElementById('btn2').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
-			correctOrNot.innerText = "Correct";
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion();
-			correctOrNot.innerText = "";
-
 
 		}
 		else if (parseInt(document.getElementById('btn2').innerHTML) != binToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn3').onclick = function() {
 		if (parseInt(document.getElementById('btn3').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
-			correctOrNot.innerText = "Correct";
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion();
-			correctOrNot.innerText = "";
 		}
 		else if (parseInt(document.getElementById('btn3').innerHTML) != binToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn4').onclick = function() {
 		if (parseInt(document.getElementById('btn4').innerHTML) == binToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
-			correctOrNot.innerText = "Correct";
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion();
-			correctOrNot.innerText = "";
-
 		}
 		else if (parseInt(document.getElementById('btn4').innerHTML) != binToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 }
@@ -87,44 +123,92 @@ function hexGame(){
 		if (parseInt(document.getElementById('btn1').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion_hex();
 		}
 		else if (parseInt(document.getElementById('btn1').innerHTML) != hexToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn2').onclick = function(){
 		if (parseInt(document.getElementById('btn2').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion_hex();
 		}
 		else if (parseInt(document.getElementById('btn2').innerHTML) != hexToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn3').onclick = function(){
 		if (parseInt(document.getElementById('btn3').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion_hex();
 		}
 		else if (parseInt(document.getElementById('btn3').innerHTML) != hexToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn4').onclick = function(){
 		if (parseInt(document.getElementById('btn4').innerHTML) == hexToDec) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomQuestion_hex();
 		}
 		else if (parseInt(document.getElementById('btn4').innerHTML) != hexToDec) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 }
@@ -143,44 +227,92 @@ function plusGame(){
 		if (parseInt(document.getElementById('btn1').innerHTML) == plusResult) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomPlus();
 		}
 		else if (parseInt(document.getElementById('btn1').innerHTML) != plusResult) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn2').onclick = function() {
 		if (parseInt(document.getElementById('btn2').innerHTML) == plusResult) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomPlus();
 		}
 		else if (parseInt(document.getElementById('btn2').innerHTML) != plusResult) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn3').onclick = function() {
 		if (parseInt(document.getElementById('btn3').innerHTML) == plusResult) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomPlus();
 		}
 		else if (parseInt(document.getElementById('btn3').innerHTML) != plusResultc) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 	document.getElementById('btn4').onclick = function() {
 		if (parseInt(document.getElementById('btn4').innerHTML) == plusResult) {
 			score++;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Correct";
+			trueorfalse.classList.add("forestgreen");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("forestgreen");
+			}, 500);
 			randomPlus();
 		}
 		else if (parseInt(document.getElementById('btn4').innerHTML) != plusResult) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
+			trueorfalse.innerText = "Incorrect";
+			trueorfalse.classList.add("darkred");
+			setTimeout(function(){
+				trueorfalse.innerText = "";
+				trueorfalse.classList.remove("darkred");
+			}, 500);
 		}
 	};
 }
