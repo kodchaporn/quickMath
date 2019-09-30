@@ -281,7 +281,7 @@ function plusGame(){
 			}, 500);
 			randomPlus();
 		}
-		else if (parseInt(document.getElementById('btn3').innerHTML) != plusResultc) {
+		else if (parseInt(document.getElementById('btn3').innerHTML) != plusResult) {
 			score--;
 			document.getElementById("score").innerHTML = "score:" + score;
 			trueorfalse.innerText = "Incorrect";
